@@ -16,6 +16,7 @@ function Todo({todo, deleteTodo, changeStatus, updateTodo, input}) {
                 />
 
             <p className={todo.status ? 'checkedTodo' : ''}>{todo.title}</p>
+
             <button onClick={() => deleteTodo(todo.id)}>удалить</button>
             <button onClick={handleUpdate}>поменять</button>
 
