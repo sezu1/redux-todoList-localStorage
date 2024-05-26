@@ -44,25 +44,12 @@ function getTodosLS_ActionCreator(todos){
     }
 }
 
-function changeTitleActionCreator(){
-    return {
-        type: types.CHANGE_TITLE,
-        payload: 'new title'
-    }
-}
 
-function changeTitleFromInputActionCreator(title){
-    return {
-        type: types.CHANGE_TITLE_FROM_INPUT,
-        payload: title
-    }
-}
 
 export {createTodoActionCreator,
     deleteTodoActionCreator,
     changeStatusActionCreator,
     updateTodoActionCreator,
     deleteTodosActionCreator,
-    getTodosLS_ActionCreator,
-    changeTitleActionCreator,
-    changeTitleFromInputActionCreator}
+    getTodosLS_ActionCreator
+}

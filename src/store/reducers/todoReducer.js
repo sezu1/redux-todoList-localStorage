@@ -56,6 +56,7 @@ const initialState = {
                     ...state,
                     todos: action.payload
                 }
+
             case types.GET_TODOS_LS:
                     return {
                         ...state,

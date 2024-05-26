@@ -7,9 +7,10 @@ import {createTodoActionCreator,
     updateTodoActionCreator,
     deleteTodosActionCreator,
     getTodosLS_ActionCreator,
-    changeTitleActionCreator,
-    changeTitleFromInputActionCreator} from "../store/actionCreators/todosActionsCreator";
+    } from "../store/actionCreators/todosActionsCreator";
 
+import {changeTitleActionCreator,
+        changeTitleFromInputActionCreator} from "../store/actionCreators/titleActionCreator";
 
 
 function TodosPage() {
@@ -17,6 +18,8 @@ function TodosPage() {
     const [input, setInput] = useState('');
     const {todos} = useSelector((store) => store.todosR)
     const {title} = useSelector((store) => store.titleR);
+
+
 
 
 
@@ -36,7 +39,7 @@ function TodosPage() {
     }
 
     function deleteAll(){
-        dispatch(deleteTodosActionCreator);
+        dispatch(deleteTodosActionCreator());
     }
 
     function updateTodo(id, input){
@@ -74,6 +77,7 @@ function TodosPage() {
             <button onClick={deleteAll}>delete all</button>
             <button onClick={changeTitleFromInput}>change title from input</button>
             <button onClick={changeTitle}>change title</button>
+
 
             {
                 todos.length > 0 ?
